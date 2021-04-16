@@ -1,4 +1,6 @@
 import 'styles/main.scss';
+import 'styles/fonts.scss';
+
 import type { AppProps } from 'next/app';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
