@@ -46,7 +46,7 @@ module.exports = {
       },
       fontFamily: {
         'open-sans': 'Open Sans',
-        roboto: 'Roboto',
+        poppins: 'Poppins',
       },
     },
   },

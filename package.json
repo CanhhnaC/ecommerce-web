@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "format": "prettier --write **/*.{js,ts,tsx}",
+    "lint": "yarn tsc & eslint --ext .ts,.tsx .",
+    "type-check": "tsc --pretty --noEmit"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -40,8 +43,10 @@
     "eslint-plugin-prettier": "3.1.4",
     "eslint-plugin-react": "7.21.5",
     "eslint-plugin-react-hooks": "4.2.0",
+    "husky": "4.3.8",
     "jest": "26.6.1",
     "jest-watch-typeahead": "0.6.1",
+    "lint-staged": "10.5.3",
     "postcss": "^8.2.10",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-nesting": "^7.0.1",
@@ -49,5 +54,16 @@
     "prettier": "2.1.2",
     "tailwindcss": "^2.1.1",
     "typescript": "^4.2.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && yarn run type-check"
+    }
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
   }
 }
