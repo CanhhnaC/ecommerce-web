@@ -12,3 +12,18 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
+@layer base {
+  h1 {
+    @apply font-poppins text-32px font-semibold;
+  }
+
+  button {
+    @apply font-poppins font-bold text-15px;
+  }
+}
+
+@layer components {
+}
+
+@layer utilities {
+}

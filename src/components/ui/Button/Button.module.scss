@@ -1,0 +1,55 @@
+// Mixin for button
+
+// Base style of button
+.btn {
+  touch-action: manipulation;
+  @apply relative inline-block whitespace-nowrap text-center cursor-pointer transition duration-300 ease-in-out 
+        select-none border-2 rounded-12px btn-default px-16px py-25/2px;
+
+  &,
+  &:active,
+  &:focus {
+    @apply outline-none;
+  }
+  &:not([disabled]):hover {
+    @apply no-underline;
+  }
+  &:not([disabled]):active {
+    @apply shadow-none outline-none;
+  }
+  &[disabled] {
+    @apply cursor-not-allowed;
+    > * {
+      @apply pointer-events-none;
+    }
+  }
+
+  &-lg {
+    @apply px-48px py-33/2px;
+  }
+  &-sm {
+    @apply px-12px py-13/2px;
+  }
+}
+
+.btn-default {
+  @apply border-C2-C text-C1-A;
+
+  &:hover,
+  &:focus,
+  &:active {
+    @apply no-underline border-C2-B text-C2-B;
+  }
+}
+
+.btn-primary {
+  @apply border-C2-B bg-C2-A text-C1-J;
+}
+
+.btn-gray {
+  @apply border-transparent bg-C1-F text-C1-A;
+}
+
+.btn-link {
+  @apply border-transparent bg-transparent text-C1-A;
+}

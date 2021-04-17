@@ -1,0 +1,13 @@
+.container {
+  width: 15px;
+  height: 15px;
+  @apply relative;
+}
+
+.spin {
+  width: 15px;
+  height: 15px;
+  border: 2.5px solid transparent;
+  border-top: 2.5px solid white;
+  @apply block absolute rounded-full top-0 left-0;
+}
