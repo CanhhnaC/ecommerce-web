@@ -1,5 +1,6 @@
-import 'styles/main.scss';
-import 'styles/fonts.scss';
+import 'src/styles/main.scss';
+import 'src/styles/fonts.scss';
+import 'src/styles/chrome-bug.css';
 import 'nprogress/nprogress.css';
 
 import type { AppProps } from 'next/app';
